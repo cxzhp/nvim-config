@@ -4,7 +4,7 @@ local keymap = vim.keymap
 local hlslens = require("hlslens")
 
 hlslens.setup {
-  calm_down = true,
+  calm_down = false,
   nearest_only = true,
 }
 

@@ -186,6 +186,9 @@ Some of the shortcuts I use frequently are listed here. In the following shortcu
 | `ctrl-u`          | Insert        | Linux/macOS/Win | Turn word under cursor to upper case                                     |
 | `ctrl-t`          | Insert        | Linux/macOS/Win | Turn word under cursor to title case                                     |
 | `jk`              | Insert        | Linux/macOS/Win | Return to Normal mode without lagging                                    |
+| `<space>e`        | Normal        | Linux           | Toggle nvim-tree                                                         |
+| `<C-l>`           | Normal        | Linux           | Buffer line cycle next                                                   |
+| `<C-h>`           | Normal        | Linux           | Buffer line cycle prev                                                   |
 
 # Custom commands
 

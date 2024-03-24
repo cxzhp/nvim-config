@@ -56,11 +56,16 @@ M.colorscheme_conf = {
     vim.g.material_style = "oceanic"
     vim.cmd('colorscheme material')
   end,
+  desert = function()
+    -- vim.g.material_style = "oceanic"
+    vim.cmd('colorscheme desert')
+  end,
 }
 
 --- Use a random colorscheme from the pre-defined list of colorschemes.
 M.rand_colorscheme = function()
   local colorscheme = utils.rand_element(vim.tbl_keys(M.colorscheme_conf))
+  local colorscheme = "edge"
 
   if not vim.tbl_contains(vim.tbl_keys(M.colorscheme_conf), colorscheme) then
     local msg = "Invalid colorscheme: " .. colorscheme

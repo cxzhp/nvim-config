@@ -473,7 +473,7 @@ local plugin_specs = {
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
-    keys = { "<space>s" },
+    keys = { "<space>e" },
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("config.nvim-tree")
@@ -487,6 +487,32 @@ local plugin_specs = {
     tag = "legacy",
     config = function()
       require("config.fidget-nvim")
+    end,
+  },
+  {
+      "Exafunction/codeium.nvim",
+      dependencies = {
+          "nvim-lua/plenary.nvim",
+          "hrsh7th/nvim-cmp",
+      },
+      config = function()
+          require("codeium").setup({
+          })
+      end
+  },
+  {
+      "zbirenbaum/copilot.lua",
+      cmd = "Copilot",
+      event = "InsertEnter",
+      config = function()
+        require("copilot").setup({})
+      end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
     end,
   },
 }

@@ -31,6 +31,8 @@ cmp.setup {
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
   },
   sources = {
+    { name = "codeium" }, -- for codeium completion
+    { name = "copilot" }, -- for copilot completion
     { name = "nvim_lsp" }, -- For nvim-lsp
     { name = "ultisnips" }, -- For ultisnips user.
     { name = "path" }, -- for path completion

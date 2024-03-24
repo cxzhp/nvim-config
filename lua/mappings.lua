@@ -159,6 +159,13 @@ keymap.set("n", "gb", '<cmd>call buf_utils#GoToBuffer(v:count, "forward")<cr>', 
 keymap.set("n", "gB", '<cmd>call buf_utils#GoToBuffer(v:count, "backward")<cr>', {
   desc = "go to buffer (backward)",
 })
+keymap.set("n", "<C-l>", '<cmd>call buf_utils#GoToBuffer(0, "forward")<cr>', {
+  desc = "buffer line cycle next",
+})
+keymap.set("n", "<C-h>", '<cmd>call buf_utils#GoToBuffer(0, "backward")<cr>', {
+  desc = "buffer line cycle prev",
+})
+
 
 -- Switch windows
 keymap.set("n", "<left>", "<c-w>h")
