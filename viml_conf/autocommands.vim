@@ -119,5 +119,25 @@ augroup LargeFile
   autocmd BufReadPre * call s:handle_large_file()
 augroup END
 
+
+augroup HighlightTODO
+  autocmd!
+  " 在启动时高亮显示所有的 TODO 字符串
+  autocmd VimEnter * call HighlightTODO()
+augroup END
+
+function! HighlightTODO()
+    " 清除之前的匹配规则
+    call clearmatches()
+
+    " 使用:hightlight命令来查询可以使用的高亮显示的颜色名称
+
+    " 添加匹配规则来高亮显示所有的 TODO 字符串
+    call matchadd('RedrawDebugClear', 'TODO')
+endfunction
+
+
+
+
 " Load auto-command defined in Lua
 lua require("custom-autocmd")
